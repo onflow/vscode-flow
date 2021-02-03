@@ -82,7 +82,7 @@ const startEmulator = (ext: Extension) => async () => {
       const accounts = await ext.api.createDefaultAccounts(ext.config.numAccounts);
 
       accounts.forEach((address) => ext.config.addAccount(address));
-      
+
       const activeAccount = ext.config.getAccount(0)
 
       if (!activeAccount) {
